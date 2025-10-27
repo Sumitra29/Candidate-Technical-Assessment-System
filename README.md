@@ -35,7 +35,7 @@ Built using HTML, CSS, and JavaScript — candidates can select programming lang
 
 🖥️ Works standalone — no backend required
 
-#### Project Structure
+### Project Structure
 ```text
 /Quiz
  ├── index.html        # main application
@@ -46,3 +46,4 @@ Built using HTML, CSS, and JavaScript — candidates can select programming lang
 ```
 
 ###### 📜 License: Licensed under the MIT License.
+
