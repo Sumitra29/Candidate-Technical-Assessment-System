@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Coding Round Sample</title>
+  <link rel="preload" href="index.css" as="style"> 
+  <link rel="stylesheet" href="index.css">
+  <link rel="preload" href="index.js" as="script">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- LANDING CARD -->
+    <div id="landing" class="card" role="main">
+      <h1>Welcome to the Coding Round 💻</h1>
+      <p>Select one or more programming languages you will use.</p>
+
+      <div class="multi" id="multiSelect">
+        <div id="msToggle" class="ms-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+          <span class="ms-placeholder" id="msPlaceholder">Choose language(s)</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M6 9l6 6 6-6" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="chips" id="chipsContainer" aria-live="polite"></div>
+        <div class="ms-dropdown" id="msDropdown" role="listbox" tabindex="-1" aria-label="Programming languages" hidden></div>
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" class="start" disabled>Start</button>
+        <div id="landingTimer" class="timer" aria-hidden="true">Timer: 00:00</div>
+      </div>
+    </div>
+
+    <!-- QUIZ CARD (hidden initially) -->
+    <div id="quiz" class="quiz-wrap" aria-hidden="true">
+      <div class="quiz-card">
+        <header>
+          <div>
+            <h2 id="title">Coding Round — Quiz</h2>
+            <div class="meta" id="meta">Loading...</div>
+          </div>
+          <div style="text-align:right">
+            <div class="timer" id="timer" aria-live="polite">00:00</div>
+            <!-- Per-question countdown / status -->
+            <div style="margin-top:6px;font-size:0.95rem;color:var(--accent);font-weight:700" id="qTimer">60s — active</div>
+            <div style="margin-top:8px;font-size:0.9rem;color:var(--muted)">Questions: <span id="totalQs">0</span></div>
+          </div>
+        </header>
+
+        <div class="question-area" id="qa"></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
